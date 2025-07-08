@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akademisyenler - AkademikRandevu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>AkademikRandevu</h1>
+                </a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="akademisyenler.html" class="active">Akademisyenler</a></li>
+                    <li><a href="bolumler.html">Bölümler</a></li>
+                    <li><a href="birimler.html">Birimler</a></li>
+                    <li><a href="duyurular.html">Duyurular</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="login.html" class="btn btn-primary">Giriş</a>
+                <a href="register.html" class="btn btn-secondary">Kayıt Ol</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Academics List Section -->
+    <section class="featured" style="padding-top: 40px;">
+        <div class="container">
+            <div class="section-header">
+                <h3>Akademisyenlerimiz</h3>
+                <p>Fakülte ve bölümlerimizde görev yapan değerli akademisyenlerimizle tanışın.</p>
+            </div>
+            
+            <!-- Search and Filter -->
+            <div class="search-filters" style="margin-bottom: 30px;">
+                <div class="filter-group">
+                    <input type="text" placeholder="Akademisyen ara..." class="form-control">
+                </div>
+                <div class="filter-group">
+                    <select class="form-control">
+                        <option value="">Tüm Fakülteler</option>
+                        <option value="muhendislik">Mühendislik Fakültesi</option>
+                        <option value="isletme">İşletme Fakültesi</option>
+                        <option value="fen-edebiyat">Fen Edebiyat Fakültesi</option>
+                        <option value="egitim">Eğitim Fakültesi</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select class="form-control">
+                        <option value="">Tüm Bölümler</option>
+                        <option value="bilgisayar">Bilgisayar Mühendisliği</option>
+                        <option value="elektrik">Elektrik-Elektronik Mühendisliği</option>
+                        <option value="isletme">İşletme</option>
+                        <option value="psikoloji">Psikoloji</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="academic-grid">
+                <div class="academic-card">
+                    <div class="rating">
+                        <span>5.0</span>
+                    </div>
+                    <div class="academic-img">
+                        <img src="img/academic1.jpg" alt="Prof. Dr. Ahmet Yılmaz" onerror="this.src='img/default-user.svg'">
+                    </div>
+                    <div class="academic-info">
+                        <span class="department">Bilgisayar Mühendisliği</span>
+                        <h4 class="academic-available">Prof. Dr. Ahmet Yılmaz</h4>
+                        <div class="consult-fee">
+                            <span>Randevu Süresi</span>
+                            <span>30dk</span>
+                        </div>
+                        <a href="randevu-al.html?academic=ahmet-yilmaz" class="btn btn-primary btn-block">Randevu Al</a>
+                    </div>
+                </div>
+                <div class="academic-card">
+                    <div class="rating">
+                        <span>4.8</span>
+                    </div>
+                    <div class="academic-img">
+                        <img src="img/academic2.jpg" alt="Doç. Dr. Ayşe Kaya" onerror="this.src='img/default-user.svg'">
+                    </div>
+                    <div class="academic-info">
+                        <span class="department">İşletme</span>
+                        <h4 class="academic-available">Doç. Dr. Ayşe Kaya</h4>
+                        <div class="consult-fee">
+                            <span>Randevu Süresi</span>
+                            <span>45dk</span>
+                        </div>
+                        <a href="randevu-al.html?academic=ayse-kaya" class="btn btn-primary btn-block">Randevu Al</a>
+                    </div>
+                </div>
+                <div class="academic-card">
+                    <div class="rating">
+                        <span>4.9</span>
+                    </div>
+                    <div class="academic-img">
+                        <img src="img/academic3.jpg" alt="Dr. Öğr. Üyesi Mehmet Demir" onerror="this.src='img/default-user.svg'">
+                    </div>
+                    <div class="academic-info">
+                        <span class="department">Psikoloji</span>
+                        <h4 class="academic-available">Dr. Öğr. Üyesi Mehmet Demir</h4>
+                        <div class="consult-fee">
+                            <span>Randevu Süresi</span>
+                            <span>20dk</span>
+                        </div>
+                        <a href="randevu-al.html?academic=mehmet-demir" class="btn btn-primary btn-block">Randevu Al</a>
+                    </div>
+                </div>
+                <div class="academic-card">
+                    <div class="rating">
+                        <span>4.7</span>
+                    </div>
+                    <div class="academic-img">
+                        <img src="img/academic4.jpg" alt="Prof. Dr. Zeynep Arslan" onerror="this.src='img/default-user.svg'">
+                    </div>
+                    <div class="academic-info">
+                        <span class="department">Elektrik-Elektronik Mühendisliği</span>
+                        <h4 class="academic-available">Prof. Dr. Zeynep Arslan</h4>
+                        <div class="consult-fee">
+                            <span>Randevu Süresi</span>
+                            <span>40dk</span>
+                        </div>
+                        <a href="randevu-al.html?academic=zeynep-arslan" class="btn btn-primary btn-block">Randevu Al</a>
+                    </div>
+                </div>
+                <div class="academic-card">
+                    <div class="rating">
+                        <span>5.0</span>
+                    </div>
+                    <div class="academic-img">
+                        <img src="img/academic5.jpg" alt="Prof. Dr. Mustafa Aydın" onerror="this.src='img/default-user.svg'">
+                    </div>
+                    <div class="academic-info">
+                        <span class="department">Bilgisayar Mühendisliği</span>
+                        <h4 class="academic-available">Prof. Dr. Mustafa Aydın</h4>
+                        <div class="consult-fee">
+                            <span>Randevu Süresi</span>
+                            <span>30dk</span>
+                        </div>
+                        <a href="randevu-al.html?academic=mustafa-aydin" class="btn btn-primary btn-block">Randevu Al</a>
+                    </div>
+                </div>
+                <div class="academic-card">
+                    <div class="rating">
+                        <span>4.6</span>
+                    </div>
+                    <div class="academic-img">
+                        <img src="img/academic6.jpg" alt="Dr. Öğr. Üyesi Aylin Kılıç" onerror="this.src='img/default-user.svg'">
+                    </div>
+                    <div class="academic-info">
+                        <span class="department">Fen Edebiyat Fakültesi</span>
+                        <h4 class="academic-available">Dr. Öğr. Üyesi Aylin Kılıç</h4>
+                        <div class="consult-fee">
+                            <span>Randevu Süresi</span>
+                            <span>45dk</span>
+                        </div>
+                        <a href="randevu-al.html?academic=aylin-kilic" class="btn btn-primary btn-block">Randevu Al</a>
+                    </div>
+                </div>
+                <div class="academic-card">
+                    <div class="rating">
+                        <span>4.8</span>
+                    </div>
+                    <div class="academic-img">
+                        <img src="img/academic7.jpg" alt="Doç. Dr. Ali Tekin" onerror="this.src='img/default-user.svg'">
+                    </div>
+                    <div class="academic-info">
+                        <span class="department">Eğitim Fakültesi</span>
+                        <h4 class="academic-available">Doç. Dr. Ali Tekin</h4>
+                        <div class="consult-fee">
+                            <span>Randevu Süresi</span>
+                            <span>30dk</span>
+                        </div>
+                        <a href="randevu-al.html?academic=ali-tekin" class="btn btn-primary btn-block">Randevu Al</a>
+                    </div>
+                </div>
+                <div class="academic-card">
+                    <div class="rating">
+                        <span>4.5</span>
+                    </div>
+                    <div class="academic-img">
+                        <img src="img/academic8.jpg" alt="Prof. Dr. Sema Yücel" onerror="this.src='img/default-user.svg'">
+                    </div>
+                    <div class="academic-info">
+                        <span class="department">İşletme</span>
+                        <h4 class="academic-available">Prof. Dr. Sema Yücel</h4>
+                        <div class="consult-fee">
+                            <span>Randevu Süresi</span>
+                            <span>25dk</span>
+                        </div>
+                        <a href="randevu-al.html?academic=sema-yucel" class="btn btn-primary btn-block">Randevu Al</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination" style="margin-top: 30px; text-align: center;">
+                <a href="#" class="btn btn-outline active">1</a>
+                <a href="#" class="btn btn-outline">2</a>
+                <a href="#" class="btn btn-outline">3</a>
+                <a href="#" class="btn btn-outline"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 AkademikRandevu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

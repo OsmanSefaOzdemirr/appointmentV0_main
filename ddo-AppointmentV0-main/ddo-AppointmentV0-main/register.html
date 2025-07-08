@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol - AkademikRandevu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>AkademikRandevu</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="akademisyenler.html">Akademisyenler</a></li>
+                    <li><a href="bolumler.html">Bölümler</a></li>
+                    <li><a href="duyurular.html">Duyurular</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="login.html" class="btn btn-primary">Giriş</a>
+                <a href="register.html" class="btn btn-secondary active">Kayıt Ol</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Register Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-form-container">
+                    <div class="auth-form-header">
+                        <h2>Kayıt Ol</h2>
+                        <p>Akademik randevu sistemi için yeni hesap oluşturun</p>
+                    </div>
+                    
+                    <div class="role-selector">
+                        <div class="role-option active" data-role="student">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>Öğrenci</span>
+                        </div>
+                        <div class="role-option" data-role="academic">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Akademisyen</span>
+                        </div>
+                    </div>
+                    
+                    <form id="registerForm" class="auth-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">Ad</label>
+                                <input type="text" id="first-name" name="first-name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Soyad</label>
+                                <input type="text" id="last-name" name="last-name" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-posta</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                            <small>Üniversite e-posta adresinizi kullanın</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="student-id">Öğrenci Numarası</label>
+                            <input type="text" id="student-id" name="student-id" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group academic-field" style="display: none;">
+                            <label for="faculty">Fakülte</label>
+                            <select id="faculty" name="faculty" class="form-control">
+                                <option value="">Fakülte Seçin</option>
+                                <option value="muhendislik">Mühendislik Fakültesi</option>
+                                <option value="isletme">İşletme Fakültesi</option>
+                                <option value="fen-edebiyat">Fen Edebiyat Fakültesi</option>
+                                <option value="egitim">Eğitim Fakültesi</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group academic-field" style="display: none;">
+                            <label for="department">Bölüm</label>
+                            <select id="department" name="department" class="form-control">
+                                <option value="">Bölüm Seçin</option>
+                                <option value="bilgisayar">Bilgisayar Mühendisliği</option>
+                                <option value="elektrik">Elektrik-Elektronik Mühendisliği</option>
+                                <option value="isletme">İşletme</option>
+                                <option value="psikoloji">Psikoloji</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group student-field">
+                            <label for="grade">Sınıf</label>
+                            <select id="grade" name="grade" class="form-control">
+                                <option value="">Sınıf Seçin</option>
+                                <option value="1">1. Sınıf</option>
+                                <option value="2">2. Sınıf</option>
+                                <option value="3">3. Sınıf</option>
+                                <option value="4">4. Sınıf</option>
+                                <option value="master">Yüksek Lisans</option>
+                                <option value="phd">Doktora</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Şifre</label>
+                            <div class="password-input">
+                                <input type="password" id="password" name="password" class="form-control" required>
+                                <i class="fas fa-eye-slash toggle-password"></i>
+                            </div>
+                            <small>En az 8 karakter, büyük-küçük harf ve rakam içermelidir</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-password">Şifre (Tekrar)</label>
+                            <div class="password-input">
+                                <input type="password" id="confirm-password" name="confirm-password" class="form-control" required>
+                                <i class="fas fa-eye-slash toggle-password"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms"><a href="#">Kullanım şartlarını</a> ve <a href="#">gizlilik politikasını</a> kabul ediyorum</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Kayıt Ol</button>
+                    </form>
+                    
+                    <div class="auth-form-footer">
+                        <p>Zaten hesabınız var mı? <a href="login.html">Giriş Yap</a></p>
+                    </div>
+                </div>
+                
+                <div class="auth-image">
+                    <img src="img/register-illustration.svg" alt="Kayıt Ol">
+                    <div class="auth-image-text">
+                        <h3>Akademik Randevu Sistemine Hoş Geldiniz</h3>
+                        <p>Öğrenciler ve akademisyenler arasında kolay iletişim ve randevu oluşturma imkanı.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Akademisyenlerle hızlı randevu</li>
+                            <li><i class="fas fa-check-circle"></i> Takvim entegrasyonu</li>
+                            <li><i class="fas fa-check-circle"></i> Bildirimler ve hatırlatmalar</li>
+                            <li><i class="fas fa-check-circle"></i> 7/24 erişim</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="margin-top: 80px;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 AkademikRandevu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Role selector
+            const roleOptions = document.querySelectorAll('.role-option');
+            const academicFields = document.querySelectorAll('.academic-field');
+            const studentFields = document.querySelectorAll('.student-field');
+            
+            roleOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove active class from all options
+                    roleOptions.forEach(opt => opt.classList.remove('active'));
+                    
+                    // Add active class to clicked option
+                    this.classList.add('active');
+                    
+                    // Show/hide fields based on role
+                    if (this.dataset.role === 'academic') {
+                        academicFields.forEach(field => field.style.display = 'block');
+                        studentFields.forEach(field => field.style.display = 'none');
+                        document.getElementById('student-id').parentElement.style.display = 'none';
+                    } else {
+                        academicFields.forEach(field => field.style.display = 'none');
+                        studentFields.forEach(field => field.style.display = 'block');
+                        document.getElementById('student-id').parentElement.style.display = 'block';
+                    }
+                });
+            });
+            
+            // Toggle password visibility
+            const togglePasswordBtns = document.querySelectorAll('.toggle-password');
+            
+            togglePasswordBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const passwordField = this.previousElementSibling;
+                    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordField.setAttribute('type', type);
+                    this.classList.toggle('fa-eye');
+                    this.classList.toggle('fa-eye-slash');
+                });
+            });
+            
+            // Form submission
+            const registerForm = document.getElementById('registerForm');
+            
+            registerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get password values
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirm-password').value;
+                
+                // Validate password
+                const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+                
+                if (!passwordRegex.test(password)) {
+                    alert('Şifre en az 8 karakter uzunluğunda olmalı ve en az bir büyük harf, bir küçük harf ve bir rakam içermelidir.');
+                    return;
+                }
+                
+                if (password !== confirmPassword) {
+                    alert('Şifreler eşleşmiyor.');
+                    return;
+                }
+                
+                // Form is valid, would normally submit to server
+                alert('Kaydınız başarıyla oluşturuldu! Giriş sayfasına yönlendiriliyorsunuz.');
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
+    
+    <style>
+        .auth-section {
+            padding: 60px 0;
+            background-color: var(--light-bg);
+            min-height: calc(100vh - 80px - 300px);
+            display: flex;
+            align-items: center;
+        }
+        
+        .auth-container {
+            display: flex;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        .auth-form-container {
+            flex: 1;
+            padding: 40px;
+        }
+        
+        .auth-image {
+            flex: 1;
+            background-color: var(--primary-light);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .auth-image img {
+            max-width: 80%;
+            margin-bottom: 20px;
+        }
+        
+        .auth-image-text h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .auth-image-text p {
+            margin-bottom: 20px;
+        }
+        
+        .auth-image-text ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        
+        .auth-image-text ul li {
+            margin-bottom: 10px;
+        }
+        
+        .auth-image-text ul li i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .auth-form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .auth-form-header h2 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .auth-form-header p {
+            color: var(--light-text);
+        }
+        
+        .role-selector {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .role-option {
+            flex: 1;
+            padding: 15px;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .role-option i {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: var(--light-text);
+            display: block;
+        }
+        
+        .role-option span {
+            font-weight: 500;
+        }
+        
+        .role-option.active {
+            background-color: var(--primary-light);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .role-option.active i {
+            color: var(--primary-color);
+        }
+        
+        .password-input {
+            position: relative;
+        }
+        
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: var(--light-text);
+        }
+        
+        .auth-form-footer {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .auth-form-footer a {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        @media (max-width: 992px) {
+            .auth-container {
+                flex-direction: column;
+            }
+            
+            .auth-image {
+                display: none;
+            }
+        }
+    </style>
+</body>
+</html> 

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Paneli - AkademikRandevu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>AkademikRandevu</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="akademisyenler.html">Akademisyenler</a></li>
+                    <li><a href="bolumler.html">Bölümler</a></li>
+                    <li><a href="duyurular.html">Duyurular</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <img src="img/user.jpg" alt="Profil Resmi" class="user-img">
+                        <span>Ayşe Yılmaz</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="profile-settings.html"><i class="fas fa-user-cog"></i> Profil Ayarları</a>
+                        <a href="login.html"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard">
+        <div class="container dashboard-container">
+            <div class="profile-sidebar">
+                <div class="user-info">
+                    <div class="profile-img">
+                        <img src="img/user.jpg" alt="Ayşe Yılmaz">
+                    </div>
+                    <h3 class="user-name">Ayşe Yılmaz</h3>
+                    <span class="user-role">Öğrenci</span>
+                </div>
+                <div class="dashboard-menu">
+                    <a href="ogrenci-dashboard.html" class="menu-item active">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="randevu-listesi.html" class="menu-item">
+                        <i class="fas fa-calendar-check"></i> Randevularım
+                    </a>
+                    <a href="randevu-al.html" class="menu-item">
+                        <i class="fas fa-calendar-plus"></i> Yeni Randevu
+                    </a>
+                    <a href="mesajlar.html" class="menu-item">
+                        <i class="fas fa-envelope"></i> Mesajlar
+                    </a>
+                    <a href="profile-settings.html" class="menu-item">
+                        <i class="fas fa-user-cog"></i> Profil Ayarları
+                    </a>
+                    <a href="sifre-degistir.html" class="menu-item">
+                        <i class="fas fa-lock"></i> Şifre Değiştir
+                    </a>
+                    <a href="login.html" class="menu-item">
+                        <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+                    </a>
+                </div>
+            </div>
+            <div class="dashboard-content">
+                <h2>Hoş Geldiniz, Ayşe Yılmaz</h2>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>8</h3>
+                            <p>Toplam Randevu</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>2</h3>
+                            <p>Bekleyen Randevu</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>3</h3>
+                            <p>Okunmamış Mesaj</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>4.8</h3>
+                            <p>Ortalama Puan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Yaklaşan Randevular</h3>
+                    <table class="appointment-table">
+                        <thead>
+                            <tr>
+                                <th>Akademisyen</th>
+                                <th>Bölüm</th>
+                                <th>Tarih</th>
+                                <th>Saat</th>
+                                <th>Durum</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="academic-info-sm">
+                                        <img src="img/academic1.jpg" alt="Prof. Dr. Ahmet Yılmaz">
+                                        <div>
+                                            <h4>Prof. Dr. Ahmet Yılmaz</h4>
+                                            <p>Bilgisayar Mühendisliği</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Bilgisayar Mühendisliği</td>
+                                <td>20 Mayıs 2023</td>
+                                <td>10:30</td>
+                                <td><span class="status-badge status-confirmed">Onaylandı</span></td>
+                                <td>
+                                    <a href="#" class="action-btn btn-secondary">Detaylar</a>
+                                    <a href="#" class="action-btn btn-outline">İptal Et</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="academic-info-sm">
+                                        <img src="img/academic2.jpg" alt="Doç. Dr. Ayşe Kaya">
+                                        <div>
+                                            <h4>Doç. Dr. Ayşe Kaya</h4>
+                                            <p>İşletme</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>İşletme</td>
+                                <td>22 Mayıs 2023</td>
+                                <td>14:00</td>
+                                <td><span class="status-badge status-pending">Beklemede</span></td>
+                                <td>
+                                    <a href="#" class="action-btn btn-secondary">Detaylar</a>
+                                    <a href="#" class="action-btn btn-outline">İptal Et</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="academic-info-sm">
+                                        <img src="img/academic3.jpg" alt="Dr. Öğr. Üyesi Mehmet Demir">
+                                        <div>
+                                            <h4>Dr. Öğr. Üyesi Mehmet Demir</h4>
+                                            <p>Psikoloji</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Psikoloji</td>
+                                <td>25 Mayıs 2023</td>
+                                <td>15:45</td>
+                                <td><span class="status-badge status-pending">Beklemede</span></td>
+                                <td>
+                                    <a href="#" class="action-btn btn-secondary">Detaylar</a>
+                                    <a href="#" class="action-btn btn-outline">İptal Et</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="view-all-link">
+                        <a href="randevu-listesi.html">Tüm Randevuları Görüntüle <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 AkademikRandevu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randevularım - AkademikRandevu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>AkademikRandevu</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="akademisyenler.html">Akademisyenler</a></li>
+                    <li><a href="bolumler.html">Bölümler</a></li>
+                    <li><a href="duyurular.html">Duyurular</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <img src="img/academic1.jpg" alt="Profil Resmi" class="user-img">
+                        <span>Prof. Dr. Ahmet Yılmaz</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="profile-settings.html"><i class="fas fa-user-cog"></i> Profil Ayarları</a>
+                        <a href="login.html"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard">
+        <div class="container dashboard-container">
+            <div class="profile-sidebar">
+                <div class="user-info">
+                    <div class="profile-img">
+                        <img src="img/academic1.jpg" alt="Prof. Dr. Ahmet Yılmaz">
+                    </div>
+                    <h3 class="user-name">Prof. Dr. Ahmet Yılmaz</h3>
+                    <span class="user-role">Akademisyen</span>
+                </div>
+                <div class="dashboard-menu">
+                    <a href="akademisyen-dashboard.html" class="menu-item">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="randevu-listesi-akademisyen.html" class="menu-item active">
+                        <i class="fas fa-calendar-check"></i> Randevularım
+                    </a>
+                    <a href="takvim-ayarlari.html" class="menu-item">
+                        <i class="fas fa-calendar-alt"></i> Takvim Ayarları
+                    </a>
+                    <a href="mesajlar-akademisyen.html" class="menu-item">
+                        <i class="fas fa-envelope"></i> Mesajlar
+                    </a>
+                    <a href="profile-settings-akademisyen.html" class="menu-item">
+                        <i class="fas fa-user-cog"></i> Profil Ayarları
+                    </a>
+                    <a href="login.html" class="menu-item">
+                        <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+                    </a>
+                </div>
+            </div>
+            <div class="dashboard-content">
+                <h2>Randevularım</h2>
+                
+                <div class="dashboard-card">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-status="all">Tümü</button>
+                        <button class="filter-tab" data-status="pending">Onay Bekleyen</button>
+                        <button class="filter-tab" data-status="confirmed">Onaylanan</button>
+                        <button class="filter-tab" data-status="cancelled">İptal Edilen</button>
+                        <button class="filter-tab" data-status="completed">Tamamlanan</button>
+                    </div>
+                    
+                    <div id="appointment-list">
+                        <table class="appointment-table">
+                            <thead>
+                                <tr>
+                                    <th>Öğrenci</th>
+                                    <th>Bölüm</th>
+                                    <th>Randevu Türü</th>
+                                    <th>Tarih</th>
+                                    <th>Saat</th>
+                                    <th>Durum</th>
+                                    <th>İşlem</th>
+                                </tr>
+                            </thead>
+                            <tbody id="appointment-table-body-academic">
+                                <!-- Appointments will be loaded dynamically from localStorage -->
+                                <tr class="no-appointments-row">
+                                    <td colspan="7" class="text-center">Henüz randevu bulunmamaktadır.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <h3>Onay Bekleyen Randevular</h3>
+                    <div id="pending-appointments">
+                        <table class="appointment-table">
+                            <thead>
+                                <tr>
+                                    <th>Öğrenci</th>
+                                    <th>Bölüm</th>
+                                    <th>Randevu Türü</th>
+                                    <th>Tarih</th>
+                                    <th>Saat</th>
+                                    <th>İşlem</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pending-appointments-table">
+                                <!-- Pending appointments will be loaded dynamically from localStorage -->
+                                <tr class="no-appointments-row">
+                                    <td colspan="6" class="text-center">Onay bekleyen randevu bulunmamaktadır.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 AkademikRandevu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <style>
+        .filter-tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            overflow-x: auto;
+        }
+        
+        .filter-tab {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--secondary-color);
+            border-bottom: 2px solid transparent;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        
+        .filter-tab.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+        
+        .text-center {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .filter-tabs {
+                padding-bottom: 5px;
+            }
+            
+            .filter-tab {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</body>
+</html> 

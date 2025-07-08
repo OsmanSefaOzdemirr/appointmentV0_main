@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randevu Listesi - İdari Birim - AkademikRandevu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>AkademikRandevu</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="akademisyenler.html">Akademisyenler</a></li>
+                    <li><a href="bolumler.html">Bölümler</a></li>
+                    <li><a href="birimler.html">Birimler</a></li>
+                    <li><a href="duyurular.html">Duyurular</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <img src="img/birim-avatar.svg" alt="Birim Resmi" class="user-img">
+                        <span>Dijital Dönüşüm Ofisi</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="profile-settings-birim.html"><i class="fas fa-user-cog"></i> Birim Ayarları</a>
+                        <a href="login.html"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard">
+        <div class="container dashboard-container">
+            <div class="profile-sidebar">
+                <div class="user-info">
+                    <div class="profile-img">
+                        <img src="img/birim-avatar.svg" alt="Dijital Dönüşüm Ofisi">
+                    </div>
+                    <h3 class="user-name">Dijital Dönüşüm Ofisi</h3>
+                    <span class="user-role">İdari Birim</span>
+                </div>
+                <div class="dashboard-menu">
+                    <a href="birim-dashboard.html" class="menu-item">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="randevu-listesi-birim.html" class="menu-item active">
+                        <i class="fas fa-calendar-check"></i> Randevularım
+                    </a>
+                    <a href="takvim-ayarlari-birim.html" class="menu-item">
+                        <i class="fas fa-calendar-alt"></i> Takvim Ayarları
+                    </a>
+                    <a href="mesajlar-birim.html" class="menu-item">
+                        <i class="fas fa-envelope"></i> Mesajlar
+                    </a>
+                    <a href="profile-settings-birim.html" class="menu-item">
+                        <i class="fas fa-user-cog"></i> Birim Ayarları
+                    </a>
+                    <a href="login.html" class="menu-item">
+                        <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+                    </a>
+                </div>
+            </div>
+            <div class="dashboard-content">
+                <h2>Randevu Listesi</h2>
+                
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label for="appointment-status">Durum:</label>
+                        <select id="appointment-status" class="form-control">
+                            <option value="all">Tümü</option>
+                            <option value="pending">Onay Bekleyen</option>
+                            <option value="confirmed">Onaylanmış</option>
+                            <option value="cancelled">İptal Edilmiş</option>
+                            <option value="completed">Tamamlanmış</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="appointment-date">Tarih:</label>
+                        <input type="date" id="appointment-date" class="form-control">
+                    </div>
+                    <div class="filter-group">
+                        <label for="appointment-type">Tür:</label>
+                        <select id="appointment-type" class="form-control">
+                            <option value="all">Tümü</option>
+                            <option value="general">Genel Bilgi Alma</option>
+                            <option value="document">Belge/Evrak İşlemleri</option>
+                            <option value="problem">Sorun Çözümü</option>
+                            <option value="project">Proje/İşbirliği</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary btn-filter">
+                        <i class="fas fa-filter"></i> Filtrele
+                    </button>
+                </div>
+
+                <div class="tabs-container">
+                    <div class="tabs">
+                        <a href="#" class="tab active">Tüm Randevular</a>
+                        <a href="#" class="tab">Bugün</a>
+                        <a href="#" class="tab">Bu Hafta</a>
+                        <a href="#" class="tab">Gelecek</a>
+                        <a href="#" class="tab">Geçmiş</a>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="appointment-list">
+                            <table class="appointment-table">
+                                <thead>
+                                    <tr>
+                                        <th>Öğrenci</th>
+                                        <th>Randevu Türü</th>
+                                        <th>Tarih</th>
+                                        <th>Saat</th>
+                                        <th>Durum</th>
+                                        <th>İşlem</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="academic-info-sm">
+                                                <img src="img/user.jpg" alt="Ayşe Yılmaz">
+                                                <div>
+                                                    <h4>Ayşe Yılmaz</h4>
+                                                    <p>Bilgisayar Mühendisliği</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Genel Bilgi Alma</td>
+                                        <td>20 Mayıs 2023</td>
+                                        <td>10:30</td>
+                                        <td><span class="status-badge status-confirmed">Onaylandı</span></td>
+                                        <td>
+                                            <a href="#" class="action-btn btn-secondary">Detaylar</a>
+                                            <a href="#" class="action-btn btn-outline">İptal Et</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="academic-info-sm">
+                                                <img src="img/user2.jpg" alt="Ali Demir">
+                                                <div>
+                                                    <h4>Ali Demir</h4>
+                                                    <p>İşletme</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Belge/Evrak İşlemleri</td>
+                                        <td>20 Mayıs 2023</td>
+                                        <td>13:00</td>
+                                        <td><span class="status-badge status-confirmed">Onaylandı</span></td>
+                                        <td>
+                                            <a href="#" class="action-btn btn-secondary">Detaylar</a>
+                                            <a href="#" class="action-btn btn-outline">İptal Et</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="academic-info-sm">
+                                                <img src="img/user3.jpg" alt="Mehmet Kaya">
+                                                <div>
+                                                    <h4>Mehmet Kaya</h4>
+                                                    <p>Bilgisayar Mühendisliği</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Sorun Çözümü</td>
+                                        <td>20 Mayıs 2023</td>
+                                        <td>14:30</td>
+                                        <td><span class="status-badge status-confirmed">Onaylandı</span></td>
+                                        <td>
+                                            <a href="#" class="action-btn btn-secondary">Detaylar</a>
+                                            <a href="#" class="action-btn btn-outline">İptal Et</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="academic-info-sm">
+                                                <img src="img/user4.jpg" alt="Zeynep Demir">
+                                                <div>
+                                                    <h4>Zeynep Demir</h4>
+                                                    <p>Elektrik-Elektronik Mühendisliği</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Proje/İşbirliği</td>
+                                        <td>22 Mayıs 2023</td>
+                                        <td>11:00</td>
+                                        <td><span class="status-badge status-pending">Onay Bekliyor</span></td>
+                                        <td>
+                                            <a href="#" class="action-btn btn-primary">Onayla</a>
+                                            <a href="#" class="action-btn btn-outline">Reddet</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="academic-info-sm">
+                                                <img src="img/user5.jpg" alt="Mustafa Arslan">
+                                                <div>
+                                                    <h4>Mustafa Arslan</h4>
+                                                    <p>İşletme</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Belge/Evrak İşlemleri</td>
+                                        <td>23 Mayıs 2023</td>
+                                        <td>14:00</td>
+                                        <td><span class="status-badge status-pending">Onay Bekliyor</span></td>
+                                        <td>
+                                            <a href="#" class="action-btn btn-primary">Onayla</a>
+                                            <a href="#" class="action-btn btn-outline">Reddet</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="academic-info-sm">
+                                                <img src="img/user6.jpg" alt="Elif Yıldız">
+                                                <div>
+                                                    <h4>Elif Yıldız</h4>
+                                                    <p>Psikoloji</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Genel Bilgi Alma</td>
+                                        <td>25 Mayıs 2023</td>
+                                        <td>15:30</td>
+                                        <td><span class="status-badge status-pending">Onay Bekliyor</span></td>
+                                        <td>
+                                            <a href="#" class="action-btn btn-primary">Onayla</a>
+                                            <a href="#" class="action-btn btn-outline">Reddet</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="academic-info-sm">
+                                                <img src="img/user7.jpg" alt="Canan Kaya">
+                                                <div>
+                                                    <h4>Canan Kaya</h4>
+                                                    <p>Elektrik-Elektronik Mühendisliği</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Belge/Evrak İşlemleri</td>
+                                        <td>18 Mayıs 2023</td>
+                                        <td>13:30</td>
+                                        <td><span class="status-badge status-completed">Tamamlandı</span></td>
+                                        <td>
+                                            <a href="#" class="action-btn btn-secondary">Detaylar</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="academic-info-sm">
+                                                <img src="img/user8.jpg" alt="Serkan Demir">
+                                                <div>
+                                                    <h4>Serkan Demir</h4>
+                                                    <p>Bilgisayar Mühendisliği</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Sorun Çözümü</td>
+                                        <td>17 Mayıs 2023</td>
+                                        <td>09:30</td>
+                                        <td><span class="status-badge status-cancelled">İptal Edildi</span></td>
+                                        <td>
+                                            <a href="#" class="action-btn btn-secondary">Detaylar</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="pagination">
+                            <a href="#" class="page active">1</a>
+                            <a href="#" class="page">2</a>
+                            <a href="#" class="page">3</a>
+                            <a href="#" class="next-page">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 AkademikRandevu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

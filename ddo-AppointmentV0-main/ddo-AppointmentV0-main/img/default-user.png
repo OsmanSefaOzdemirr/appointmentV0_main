@@ -1,0 +1,11 @@
+<!-- This is a placeholder. You should replace this file with an actual PNG image of a user silhouette. 
+     The recommended dimensions are 200x200 pixels with a gray background and a darker gray silhouette. --> 
+
+<!-- 
+NOTE: This is a placeholder file. For production, replace with a real PNG file.
+
+For now, you can use the following HTML in your pages to generate a default user icon:
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAA50lEQVRogWNgGAWjYBSMglEwCkbBKBgFo2AU0BKwkGIoLS3NiI9/5coVvHrQAQsxiiQlJRnp4XByADMpijIzM+nhcHLAqANGHTDqgFEHjDpg1AGjDhh1wKgDRh0w6oBRB4w6YNQBow4YdcCoA0YdQFMHvH///j85Cnbt2vUfXR0LtVMh77Rp04goFhcXZ0SXJwrQ2gGPFBUV8ao5c/r0I2LMHe4OeCQjI4NXzZnTpx8RY+5wd8CjhoYGvGoI6R2tTkcdMOqAUQeMOmDUAaMOGHXAqANGHTDqgFEHjDpg1AGjYBSMglEwCkYBnQEADa1PxcpK+qsAAAAASUVORK5CYII=" alt="Default User">
+
+--> 

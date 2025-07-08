@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arama Sonuçları - AkademikRandevu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>AkademikRandevu</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="akademisyenler.html">Akademisyenler</a></li>
+                    <li><a href="bolumler.html">Bölümler</a></li>
+                    <li><a href="birimler.html">Birimler</a></li>
+                    <li><a href="duyurular.html">Duyurular</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="login.html" class="btn btn-primary">Giriş</a>
+                <a href="register.html" class="btn btn-secondary">Kayıt Ol</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Results Section -->
+    <section class="search-results-section" style="padding: 40px 0;">
+        <div class="container">
+            <h2 class="page-title">Arama Sonuçları</h2>
+            <p class="search-term-display" style="margin-bottom: 30px; font-size: 1.2em;">Aranan terim: <strong id="searchTerm"></strong></p>
+
+            <!-- Academicians Results -->
+            <div class="results-category">
+                <h3>Akademisyenler</h3>
+                <div id="academiciansResultsContainer" class="academic-grid" style="margin-top: 20px;">
+                    <!-- Results will be dynamically inserted here -->
+                    <p class="loading-message">Akademisyenler aranıyor...</p>
+                </div>
+            </div>
+
+            <!-- Units (Birimler) Results -->
+            <div class="results-category" style="margin-top: 40px;">
+                <h3>Birimler</h3>
+                <div id="unitsResultsContainer" class="service-grid" style="margin-top: 20px;">
+                    <!-- Results will be dynamically inserted here -->
+                    <p class="loading-message">Birimler aranıyor...</p>
+                </div>
+            </div>
+
+            <!-- Departments (Bölümler) Results -->
+            <div class="results-category" style="margin-top: 40px;">
+                <h3>Bölümler</h3>
+                <div id="departmentsResultsContainer" class="service-grid" style="margin-top: 20px;">
+                    <!-- Results will be dynamically inserted here -->
+                    <p class="loading-message">Bölümler aranıyor...</p>
+                </div>
+            </div>
+
+            <!-- Announcements (Duyurular) Results -->
+            <div class="results-category" style="margin-top: 40px;">
+                <h3>Duyurular</h3>
+                <div id="announcementsResultsContainer" style="margin-top: 20px;">
+                    <!-- Results will be dynamically inserted here -->
+                    <p class="loading-message">Duyurular aranıyor...</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 AkademikRandevu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

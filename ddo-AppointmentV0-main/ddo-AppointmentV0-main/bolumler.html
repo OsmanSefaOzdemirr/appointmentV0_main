@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bölümler - AkademikRandevu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>AkademikRandevu</h1>
+                </a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="akademisyenler.html">Akademisyenler</a></li>
+                    <li><a href="bolumler.html" class="active">Bölümler</a></li>
+                    <li><a href="birimler.html">Birimler</a></li>
+                    <li><a href="duyurular.html">Duyurular</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="login.html" class="btn btn-primary">Giriş</a>
+                <a href="register.html" class="btn btn-secondary">Kayıt Ol</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Departments Section -->
+    <section class="services" style="padding-top: 40px;">
+        <div class="container">
+            <div class="section-header">
+                <h3>Fakülteler ve Bölümler</h3>
+                <p>Üniversitemizin fakülte ve bölümleri hakkında bilgi alın</p>
+            </div>
+            
+            <!-- Mühendislik Fakültesi -->
+            <div class="department-faculty">
+                <h3 class="faculty-title"><i class="fas fa-cogs"></i> Mühendislik Fakültesi</h3>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>Bilgisayar Mühendisliği</h4>
+                        <p>Yazılım, donanım ve bilgisayar sistemleri eğitimi</p>
+                        <a href="akademisyenler.html?department=Bilgisayar%20Mühendisliği" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Elektrik-Elektronik Mühendisliği</h4>
+                        <p>Elektrik, elektronik ve kontrol sistemleri eğitimi</p>
+                        <a href="akademisyenler.html?department=Elektrik-Elektronik%20Mühendisliği" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h4>Makine Mühendisliği</h4>
+                        <p>Mekanik tasarım, enerji ve termodinamik eğitimi</p>
+                        <a href="akademisyenler.html?department=Makine%20Mühendisliği" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h4>İnşaat Mühendisliği</h4>
+                        <p>Yapı, altyapı ve ulaşım sistemleri eğitimi</p>
+                        <a href="akademisyenler.html?department=İnşaat%20Mühendisliği" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- İşletme Fakültesi -->
+            <div class="department-faculty">
+                <h3 class="faculty-title"><i class="fas fa-chart-line"></i> İşletme Fakültesi</h3>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>İşletme</h4>
+                        <p>Yönetim, organizasyon ve işletme stratejileri eğitimi</p>
+                        <a href="akademisyenler.html?department=İşletme" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h4>Ekonomi</h4>
+                        <p>Makroekonomi, mikroekonomi ve ekonomik politikalar eğitimi</p>
+                        <a href="akademisyenler.html?department=Ekonomi" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h4>Muhasebe ve Finans</h4>
+                        <p>Muhasebe ilkeleri, finansal analiz ve denetim eğitimi</p>
+                        <a href="akademisyenler.html?department=Muhasebe%20ve%20Finans" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h4>Pazarlama</h4>
+                        <p>Stratejik pazarlama, tüketici davranışları ve marka yönetimi eğitimi</p>
+                        <a href="akademisyenler.html?department=Pazarlama" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fen Edebiyat Fakültesi -->
+            <div class="department-faculty">
+                <h3 class="faculty-title"><i class="fas fa-atom"></i> Fen Edebiyat Fakültesi</h3>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h4>Kimya</h4>
+                        <p>Organik ve anorganik kimya, biyokimya eğitimi</p>
+                        <a href="akademisyenler.html?department=Kimya" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>Biyoloji</h4>
+                        <p>Moleküler biyoloji, genetik ve ekoloji eğitimi</p>
+                        <a href="akademisyenler.html?department=Biyoloji" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-square-root-alt"></i>
+                        </div>
+                        <h4>Matematik</h4>
+                        <p>Analiz, cebir ve uygulamalı matematik eğitimi</p>
+                        <a href="akademisyenler.html?department=Matematik" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4>Türk Dili ve Edebiyatı</h4>
+                        <p>Klasik ve modern Türk edebiyatı, dilbilim eğitimi</p>
+                        <a href="akademisyenler.html?department=Türk%20Dili%20ve%20Edebiyatı" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eğitim Fakültesi -->
+            <div class="department-faculty">
+                <h3 class="faculty-title"><i class="fas fa-chalkboard-teacher"></i> Eğitim Fakültesi</h3>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Eğitim Bilimleri</h4>
+                        <p>Eğitim psikolojisi, eğitim sosyolojisi eğitimi</p>
+                        <a href="akademisyenler.html?department=Eğitim%20Bilimleri" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h4>İngilizce Öğretmenliği</h4>
+                        <p>İngiliz dili eğitimi ve yabancı dil öğretim teknikleri</p>
+                        <a href="akademisyenler.html?department=İngilizce%20Öğretmenliği" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h4>Matematik Öğretmenliği</h4>
+                        <p>Matematik eğitimi ve öğretim yöntemleri</p>
+                        <a href="akademisyenler.html?department=Matematik%20Öğretmenliği" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h4>Okul Öncesi Öğretmenliği</h4>
+                        <p>Erken çocukluk eğitimi ve gelişimi</p>
+                        <a href="akademisyenler.html?department=Okul%20Öncesi%20Öğretmenliği" class="btn btn-outline" style="margin-top: 15px;">Akademisyenler</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 AkademikRandevu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

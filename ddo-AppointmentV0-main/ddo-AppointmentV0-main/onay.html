@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randevu Onayı - AkademikRandevu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>AkademikRandevu</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="akademisyenler.html">Akademisyenler</a></li>
+                    <li><a href="bolumler.html">Bölümler</a></li>
+                    <li><a href="duyurular.html">Duyurular</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <img src="img/user.jpg" alt="Profil Resmi" class="user-img">
+                        <span>Ayşe Yılmaz</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="profile-settings.html"><i class="fas fa-user-cog"></i> Profil Ayarları</a>
+                        <a href="login.html"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Confirmation Section -->
+    <section class="confirmation-section">
+        <div class="container">
+            <div class="confirmation-card">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Randevunuz Başarıyla Oluşturuldu!</h2>
+                <p class="confirmation-message">Randevu talebiniz başarıyla alınmıştır. Akademisyenin onayından sonra size bildirim gönderilecektir.</p>
+                
+                <div class="confirmation-details">
+                    <h3>Randevu Detayları</h3>
+                    <div class="detail-item">
+                        <span class="detail-label">Randevu No:</span>
+                        <span class="detail-value" id="appointment-id">RND-20230520-1042</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Randevu Türü:</span>
+                        <span class="detail-value" id="appointment-type">Genel Görüşme (30 dk)</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Akademisyen:</span>
+                        <span class="detail-value" id="academic-name">Prof. Dr. Ahmet Yılmaz (Bilgisayar Mühendisliği)</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Tarih:</span>
+                        <span class="detail-value" id="appointment-date">20 Mayıs 2023</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Saat:</span>
+                        <span class="detail-value" id="appointment-time">10:30</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Durum:</span>
+                        <span class="detail-value status-pending">Onay Bekliyor</span>
+                    </div>
+                </div>
+                
+                <div class="confirmation-notes">
+                    <p><i class="fas fa-info-circle"></i> Randevunuzun durumu <strong>Onay Bekliyor</strong> şeklindedir. Akademisyen onayladıktan sonra durumu <strong>Onaylandı</strong> olarak güncellenecektir.</p>
+                    <p><i class="fas fa-envelope"></i> Randevu durumunuzdaki değişiklikler hakkında e-posta ile bilgilendirileceksiniz.</p>
+                </div>
+                
+                <div class="confirmation-actions">
+                    <a href="ogrenci-dashboard.html" class="btn btn-primary">Randevularım</a>
+                    <a href="index.html" class="btn btn-outline">Ana Sayfaya Dön</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 AkademikRandevu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+    <style>
+        .confirmation-section {
+            padding: 60px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .confirmation-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            padding: 40px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .confirmation-icon {
+            font-size: 80px;
+            color: var(--success-color);
+            margin-bottom: 20px;
+        }
+        
+        .confirmation-message {
+            font-size: 18px;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+        }
+        
+        .confirmation-details {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .confirmation-details h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .detail-item {
+            display: flex;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 15px;
+        }
+        
+        .detail-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .detail-label {
+            flex: 0 0 30%;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+        
+        .detail-value {
+            flex: 0 0 70%;
+            color: var(--secondary-color);
+        }
+        
+        .status-pending {
+            color: var(--warning-color);
+            font-weight: 600;
+        }
+        
+        .status-confirmed {
+            color: var(--success-color);
+            font-weight: 600;
+        }
+        
+        .status-cancelled {
+            color: var(--danger-color);
+            font-weight: 600;
+        }
+        
+        .confirmation-notes {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .confirmation-notes p {
+            margin-bottom: 10px;
+        }
+        
+        .confirmation-notes p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .confirmation-notes i {
+            color: var(--primary-color);
+            margin-right: 8px;
+        }
+        
+        .confirmation-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .confirmation-card {
+                padding: 25px;
+            }
+            
+            .detail-item {
+                flex-direction: column;
+            }
+            
+            .detail-label, .detail-value {
+                flex: 0 0 100%;
+            }
+            
+            .detail-label {
+                margin-bottom: 5px;
+            }
+            
+            .confirmation-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get appointment details from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Generate random appointment ID if not provided
+            if(!urlParams.get('id')) {
+                const now = new Date();
+                const year = now.getFullYear();
+                const month = String(now.getMonth() + 1).padStart(2, '0');
+                const day = String(now.getDate()).padStart(2, '0');
+                const randomNum = Math.floor(1000 + Math.random() * 9000);
+                
+                document.getElementById('appointment-id').textContent = `RND-${year}${month}${day}-${randomNum}`;
+            } else {
+                document.getElementById('appointment-id').textContent = urlParams.get('id');
+            }
+            
+            // Set appointment type
+            if(urlParams.get('type')) {
+                document.getElementById('appointment-type').textContent = urlParams.get('type');
+            }
+            
+            // Set academic name
+            if(urlParams.get('academic')) {
+                document.getElementById('academic-name').textContent = decodeURIComponent(urlParams.get('academic'));
+            }
+            
+            // Set date
+            if(urlParams.get('date')) {
+                document.getElementById('appointment-date').textContent = decodeURIComponent(urlParams.get('date'));
+            }
+            
+            // Set time
+            if(urlParams.get('time')) {
+                document.getElementById('appointment-time').textContent = urlParams.get('time');
+            }
+        });
+    </script>
+</body>
+</html> 

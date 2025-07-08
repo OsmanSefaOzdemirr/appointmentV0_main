@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Ayarları - AkademikRandevu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>AkademikRandevu</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="akademisyenler.html">Akademisyenler</a></li>
+                    <li><a href="bolumler.html">Bölümler</a></li>
+                    <li><a href="duyurular.html">Duyurular</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <img src="img/user.jpg" alt="Profil Resmi" class="user-img">
+                        <span>Ayşe Yılmaz</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="profile-settings.html" class="active"><i class="fas fa-user-cog"></i> Profil Ayarları</a>
+                        <a href="login.html"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Settings Section -->
+    <section class="profile-settings-section">
+        <div class="container">
+            <h2 class="page-title">Profil Ayarları</h2>
+            
+            <div class="profile-settings-container">
+                <div class="profile-settings-sidebar">
+                    <div class="profile-image-container">
+                        <div class="profile-image">
+                            <img src="img/user.jpg" alt="Profil Resmi">
+                            <div class="profile-image-overlay">
+                                <i class="fas fa-camera"></i>
+                                <span>Fotoğraf Değiştir</span>
+                            </div>
+                        </div>
+                        <h3>Ayşe Yılmaz</h3>
+                        <p>Bilgisayar Mühendisliği</p>
+                        <p>Öğrenci Numarası: 20210123</p>
+                    </div>
+                    
+                    <div class="settings-menu">
+                        <a href="#profile-info" class="settings-menu-item active">
+                            <i class="fas fa-user"></i>
+                            <span>Kişisel Bilgiler</span>
+                        </a>
+                        <a href="#account-settings" class="settings-menu-item">
+                            <i class="fas fa-lock"></i>
+                            <span>Hesap Ayarları</span>
+                        </a>
+                        <a href="#notifications" class="settings-menu-item">
+                            <i class="fas fa-bell"></i>
+                            <span>Bildirimler</span>
+                        </a>
+                        <a href="#privacy" class="settings-menu-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Gizlilik</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="profile-settings-content">
+                    <div id="profile-info" class="settings-section active">
+                        <div class="settings-header">
+                            <h3>Kişisel Bilgiler</h3>
+                            <p>Profil bilgilerinizi güncelleyin</p>
+                        </div>
+                        
+                        <form class="settings-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">Ad</label>
+                                    <input type="text" id="first-name" name="first-name" class="form-control" value="Ayşe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Soyad</label>
+                                    <input type="text" id="last-name" name="last-name" class="form-control" value="Yılmaz" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">E-posta</label>
+                                <input type="email" id="email" name="email" class="form-control" value="ayse.yilmaz@edu.tr" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" value="+90 555 123 4567">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="department">Bölüm</label>
+                                <select id="department" name="department" class="form-control" required>
+                                    <option value="bilgisayar" selected>Bilgisayar Mühendisliği</option>
+                                    <option value="elektrik">Elektrik-Elektronik Mühendisliği</option>
+                                    <option value="isletme">İşletme</option>
+                                    <option value="psikoloji">Psikoloji</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="grade">Sınıf</label>
+                                <select id="grade" name="grade" class="form-control">
+                                    <option value="1">1. Sınıf</option>
+                                    <option value="2" selected>2. Sınıf</option>
+                                    <option value="3">3. Sınıf</option>
+                                    <option value="4">4. Sınıf</option>
+                                    <option value="master">Yüksek Lisans</option>
+                                    <option value="phd">Doktora</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bio">Hakkında</label>
+                                <textarea id="bio" name="bio" rows="4" class="form-control">Bilgisayar Mühendisliği 2. sınıf öğrencisiyim. Yapay zeka ve veri bilimi alanlarına ilgi duyuyorum.</textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Değişiklikleri Kaydet</button>
+                        </form>
+                    </div>
+                    
+                    <div id="account-settings" class="settings-section">
+                        <div class="settings-header">
+                            <h3>Hesap Ayarları</h3>
+                            <p>Şifrenizi ve hesap bilgilerinizi güncelleyin</p>
+                        </div>
+                        
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label for="current-password">Mevcut Şifre</label>
+                                <div class="password-input">
+                                    <input type="password" id="current-password" name="current-password" class="form-control" required>
+                                    <i class="fas fa-eye-slash toggle-password"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="new-password">Yeni Şifre</label>
+                                <div class="password-input">
+                                    <input type="password" id="new-password" name="new-password" class="form-control" required>
+                                    <i class="fas fa-eye-slash toggle-password"></i>
+                                </div>
+                                <small>En az 8 karakter, büyük-küçük harf ve rakam içermelidir</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirm-password">Yeni Şifre (Tekrar)</label>
+                                <div class="password-input">
+                                    <input type="password" id="confirm-password" name="confirm-password" class="form-control" required>
+                                    <i class="fas fa-eye-slash toggle-password"></i>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Şifreyi Güncelle</button>
+                        </form>
+                        
+                        <div class="settings-divider"></div>
+                        
+                        <div class="settings-header">
+                            <h3>Hesap Yönetimi</h3>
+                        </div>
+                        
+                        <div class="settings-actions">
+                            <button class="btn btn-outline btn-danger">Hesabı Dondur</button>
+                            <button class="btn btn-outline btn-danger">Hesabı Sil</button>
+                        </div>
+                    </div>
+                    
+                    <div id="notifications" class="settings-section">
+                        <div class="settings-header">
+                            <h3>Bildirim Ayarları</h3>
+                            <p>E-posta ve sistem bildirimleri tercihlerinizi yönetin</p>
+                        </div>
+                        
+                        <div class="settings-form">
+                            <div class="settings-group">
+                                <h4>E-posta Bildirimleri</h4>
+                                
+                                <div class="form-check toggle-switch">
+                                    <input type="checkbox" id="email-appointments" name="email-appointments" checked>
+                                    <label for="email-appointments">Randevu bildirimleri</label>
+                                </div>
+                                
+                                <div class="form-check toggle-switch">
+                                    <input type="checkbox" id="email-reminders" name="email-reminders" checked>
+                                    <label for="email-reminders">Randevu hatırlatıcıları</label>
+                                </div>
+                                
+                                <div class="form-check toggle-switch">
+                                    <input type="checkbox" id="email-news" name="email-news" checked>
+                                    <label for="email-news">Duyurular ve haberler</label>
+                                </div>
+                                
+                                <div class="form-check toggle-switch">
+                                    <input type="checkbox" id="email-updates" name="email-updates">
+                                    <label for="email-updates">Sistem güncellemeleri</label>
+                                </div>
+                            </div>
+                            
+                            <div class="settings-divider"></div>
+                            
+                            <div class="settings-group">
+                                <h4>Sistem Bildirimleri</h4>
+                                
+                                <div class="form-check toggle-switch">
+                                    <input type="checkbox" id="push-appointments" name="push-appointments" checked>
+                                    <label for="push-appointments">Randevu bildirimleri</label>
+                                </div>
+                                
+                                <div class="form-check toggle-switch">
+                                    <input type="checkbox" id="push-reminders" name="push-reminders" checked>
+                                    <label for="push-reminders">Randevu hatırlatıcıları</label>
+                                </div>
+                                
+                                <div class="form-check toggle-switch">
+                                    <input type="checkbox" id="push-messages" name="push-messages" checked>
+                                    <label for="push-messages">Mesajlar</label>
+                                </div>
+                                
+                                <div class="form-check toggle-switch">
+                                    <input type="checkbox" id="push-news" name="push-news">
+                                    <label for="push-news">Duyurular ve haberler</label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Değişiklikleri Kaydet</button>
+                        </div>
+                    </div>
+                    
+                    <div id="privacy" class="settings-section">
+                        <div class="settings-header">
+                            <h3>Gizlilik Ayarları</h3>
+                            <p>Hesap gizliliği ve veri paylaşım tercihlerinizi yönetin</p>
+                        </div>
+                        
+                        <div class="settings-form">
+                            <div class="settings-group">
+                                <h4>Profil Görünürlüğü</h4>
+                                
+                                <div class="form-group">
+                                    <label for="profile-visibility">Profilim şunlar tarafından görüntülenebilir:</label>
+                                    <select id="profile-visibility" name="profile-visibility" class="form-control">
+                                        <option value="everyone">Herkes</option>
+                                        <option value="university" selected>Sadece Üniversite Mensupları</option>
+                                        <option value="department">Sadece Bölüm Üyeleri</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-check toggle-switch">
+                                    <input type="checkbox" id="show-email" name="show-email">
+                                    <label for="show-email">E-posta adresimi göster</label>
+                                </div>
+                                
+                                <div class="form-check toggle-switch">
+                                    <input type="checkbox" id="show-phone" name="show-phone">
+                                    <label for="show-phone">Telefon numaramı göster</label>
+                                </div>
+                            </div>
+                            
+                            <div class="settings-divider"></div>
+                            
+                            <div class="settings-group">
+                                <h4>Veri Kullanımı</h4>
+                                
+                                <div class="form-check toggle-switch">
+                                    <input type="checkbox" id="data-improvement" name="data-improvement" checked>
+                                    <label for="data-improvement">Hizmet iyileştirme için verilerimi kullan</label>
+                                </div>
+                                
+                                <div class="form-check toggle-switch">
+                                    <input type="checkbox" id="analytics" name="analytics" checked>
+                                    <label for="analytics">Analitik ve istatistikler için verilerimi kullan</label>
+                                </div>
+                                
+                                <div class="form-check toggle-switch">
+                                    <input type="checkbox" id="third-party" name="third-party">
+                                    <label for="third-party">Üçüncü taraflarla veri paylaşımına izin ver</label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Değişiklikleri Kaydet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 AkademikRandevu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+    <style>
+        .profile-settings-section {
+            padding: 40px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .profile-settings-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .profile-settings-sidebar {
+            flex: 0 0 280px;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+        }
+        
+        .profile-settings-content {
+            flex: 1;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+        }
+        
+        .profile-image-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 15px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .profile-image:hover .profile-image-overlay {
+            opacity: 1;
+        }
+        
+        .profile-image-overlay i {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .profile-image-overlay span {
+            font-size: 12px;
+        }
+        
+        .profile-image-container h3 {
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+        
+        .profile-image-container p {
+            color: var(--light-text);
+            margin-bottom: 5px;
+        }
+        
+        .settings-menu {
+            margin-top: 20px;
+        }
+        
+        .settings-menu-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            color: var(--dark-text);
+            transition: var(--transition);
+        }
+        
+        .settings-menu-item i {
+            width: 20px;
+            margin-right: 10px;
+            color: var(--light-text);
+        }
+        
+        .settings-menu-item:hover {
+            background-color: var(--light-bg);
+        }
+        
+        .settings-menu-item.active {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+        }
+        
+        .settings-menu-item.active i {
+            color: var(--primary-color);
+        }
+        
+        .settings-section {
+            display: none;
+        }
+        
+        .settings-section.active {
+            display: block;
+        }
+        
+        .settings-header {
+            margin-bottom: 25px;
+        }
+        
+        .settings-header h3 {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .settings-header p {
+            color: var(--light-text);
+        }
+        
+        .settings-form {
+            max-width: 100%;
+        }
+        
+        .settings-divider {
+            margin: 30px 0;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .settings-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .settings-group {
+            margin-bottom: 30px;
+        }
+        
+        .settings-group h4 {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .toggle-switch {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .toggle-switch input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .toggle-switch label {
+            position: relative;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding-left: 55px;
+        }
+        
+        .toggle-switch label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 45px;
+            height: 24px;
+            border-radius: 12px;
+            background-color: #e0e0e0;
+            transition: var(--transition);
+        }
+        
+        .toggle-switch label:after {
+            content: '';
+            position: absolute;
+            left: 3px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: var(--white);
+            transition: var(--transition);
+        }
+        
+        .toggle-switch input:checked + label:before {
+            background-color: var(--primary-color);
+        }
+        
+        .toggle-switch input:checked + label:after {
+            left: 24px;
+        }
+        
+        .btn-danger {
+            background-color: var(--danger-color);
+            border-color: var(--danger-color);
+            color: var(--white);
+        }
+        
+        .btn-outline.btn-danger {
+            background-color: transparent;
+            color: var(--danger-color);
+        }
+        
+        .btn-outline.btn-danger:hover {
+            background-color: var(--danger-color);
+            color: var(--white);
+        }
+        
+        @media (max-width: 992px) {
+            .profile-settings-container {
+                flex-direction: column;
+            }
+            
+            .profile-settings-sidebar {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Settings Menu Navigation
+            const menuItems = document.querySelectorAll('.settings-menu-item');
+            const settingsSections = document.querySelectorAll('.settings-section');
+            
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get the target section id from href attribute
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    // Remove active class from all menu items and sections
+                    menuItems.forEach(mi => mi.classList.remove('active'));
+                    settingsSections.forEach(section => section.classList.remove('active'));
+                    
+                    // Add active class to clicked menu item and target section
+                    this.classList.add('active');
+                    targetSection.classList.add('active');
+                });
+            });
+            
+            // Toggle password visibility
+            const togglePasswordBtns = document.querySelectorAll('.toggle-password');
+            
+            togglePasswordBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const passwordField = this.previousElementSibling;
+                    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordField.setAttribute('type', type);
+                    this.classList.toggle('fa-eye');
+                    this.classList.toggle('fa-eye-slash');
+                });
+            });
+            
+            // Form submission (Personal Information)
+            const personalInfoForm = document.querySelector('#profile-info form');
+            
+            if (personalInfoForm) {
+                personalInfoForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Kişisel bilgileriniz başarıyla güncellendi!');
+                });
+            }
+            
+            // Form submission (Account Settings)
+            const accountSettingsForm = document.querySelector('#account-settings form');
+            
+            if (accountSettingsForm) {
+                accountSettingsForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const newPassword = document.getElementById('new-password').value;
+                    const confirmPassword = document.getElementById('confirm-password').value;
+                    
+                    if (newPassword !== confirmPassword) {
+                        alert('Şifreler eşleşmiyor.');
+                        return;
+                    }
+                    
+                    alert('Şifreniz başarıyla güncellendi!');
+                    this.reset();
+                });
+            }
+            
+            // Notification settings submission
+            const notificationsForm = document.querySelector('#notifications .settings-form');
+            
+            if (notificationsForm) {
+                notificationsForm.querySelector('button').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Bildirim ayarlarınız başarıyla güncellendi!');
+                });
+            }
+            
+            // Privacy settings submission
+            const privacyForm = document.querySelector('#privacy .settings-form');
+            
+            if (privacyForm) {
+                privacyForm.querySelector('button').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Gizlilik ayarlarınız başarıyla güncellendi!');
+                });
+            }
+            
+            // Account management actions
+            const suspendAccountBtn = document.querySelector('.btn-danger:first-child');
+            const deleteAccountBtn = document.querySelector('.btn-danger:last-child');
+            
+            if (suspendAccountBtn) {
+                suspendAccountBtn.addEventListener('click', function() {
+                    if (confirm('Hesabınızı dondurmak istediğinizden emin misiniz? Bu işlem sırasında randevularınız iptal edilecektir.')) {
+                        alert('Hesabınız donduruldu. Tekrar aktifleştirmek için öğrenci işleri ile iletişime geçebilirsiniz.');
+                    }
+                });
+            }
+            
+            if (deleteAccountBtn) {
+                deleteAccountBtn.addEventListener('click', function() {
+                    if (confirm('Hesabınızı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.')) {
+                        if (prompt('Bu işlemi onaylamak için "HESABIMI SİL" yazın:') === 'HESABIMI SİL') {
+                            alert('Hesabınız silindi. Yönlendiriliyorsunuz...');
+                            window.location.href = 'index.html';
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

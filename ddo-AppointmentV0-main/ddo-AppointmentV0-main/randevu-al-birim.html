@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birim Randevusu Al - AkademikRandevu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>AkademikRandevu</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="akademisyenler.html">Akademisyenler</a></li>
+                    <li><a href="bolumler.html">Bölümler</a></li>
+                    <li><a href="birimler.html">Birimler</a></li>
+                    <li><a href="duyurular.html">Duyurular</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <img src="img/user.jpg" alt="Profil Resmi" class="user-img">
+                        <span>Ayşe Yılmaz</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="profile-settings.html"><i class="fas fa-user-cog"></i> Profil Ayarları</a>
+                        <a href="login.html"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <h2 class="page-title">İdari Birim Randevusu Al</h2>
+            
+            <div class="booking-steps">
+                <div class="booking-step active">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Randevu Türü</div>
+                </div>
+                <div class="booking-step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Tarih & Saat</div>
+                </div>
+                <div class="booking-step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Bilgiler</div>
+                </div>
+            </div>
+
+            <div class="booking-panel">
+                <div class="step-content active" id="step-1">
+                    <h3>Randevu Türü Seçin</h3>
+                    <p class="step-info" id="birim-info">Bu birimden hangi konu için randevu almak istediğinizi seçin</p>
+                    
+                    <div class="appointment-types">
+                        <div class="appointment-type-card selected">
+                            <div class="appointment-type-icon">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <h4>Genel Bilgi Alma</h4>
+                            <p>Birim ile ilgili bilgi almak için genel görüşme</p>
+                            <div class="appointment-duration">Süre: 15 dk</div>
+                        </div>
+                        <div class="appointment-type-card">
+                            <div class="appointment-type-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h4>Belge/Evrak İşlemleri</h4>
+                            <p>Belge teslimi veya talep işlemleri</p>
+                            <div class="appointment-duration">Süre: 20 dk</div>
+                        </div>
+                        <div class="appointment-type-card">
+                            <div class="appointment-type-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <h4>Sorun Çözümü</h4>
+                            <p>Yaşadığınız bir sorunun çözümü için görüşme</p>
+                            <div class="appointment-duration">Süre: 30 dk</div>
+                        </div>
+                        <div class="appointment-type-card">
+                            <div class="appointment-type-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h4>Proje/İşbirliği</h4>
+                            <p>Proje veya işbirliği konularını görüşme</p>
+                            <div class="appointment-duration">Süre: 45 dk</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-buttons">
+                        <button class="btn btn-secondary" onclick="window.location.href='birimler.html'">İptal</button>
+                        <button class="btn btn-primary next-step">İleri</button>
+                    </div>
+                </div>
+
+                <div class="step-content" id="step-2">
+                    <h3>Tarih ve Saat Seçin</h3>
+                    <p class="step-info" id="birim-tarih-info">Görüşmek istediğiniz tarihi ve saati seçin</p>
+                    
+                    <div class="calendar-wrapper">
+                        <div class="calendar-header">
+                            <div class="calendar-title">Mayıs 2023</div>
+                            <div class="calendar-nav">
+                                <button class="calendar-prev"><i class="fas fa-chevron-left"></i></button>
+                                <button class="calendar-next"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="calendar-weekdays">
+                            <div class="calendar-weekday">Pzt</div>
+                            <div class="calendar-weekday">Sal</div>
+                            <div class="calendar-weekday">Çar</div>
+                            <div class="calendar-weekday">Per</div>
+                            <div class="calendar-weekday">Cum</div>
+                            <div class="calendar-weekday">Cmt</div>
+                            <div class="calendar-weekday">Paz</div>
+                        </div>
+                        
+                        <div class="calendar-days">
+                            <div class="calendar-day disabled">24</div>
+                            <div class="calendar-day disabled">25</div>
+                            <div class="calendar-day disabled">26</div>
+                            <div class="calendar-day disabled">27</div>
+                            <div class="calendar-day disabled">28</div>
+                            <div class="calendar-day disabled">29</div>
+                            <div class="calendar-day disabled">30</div>
+                            <div class="calendar-day">1</div>
+                            <div class="calendar-day">2</div>
+                            <div class="calendar-day">3</div>
+                            <div class="calendar-day">4</div>
+                            <div class="calendar-day">5</div>
+                            <div class="calendar-day">6</div>
+                            <div class="calendar-day">7</div>
+                            <div class="calendar-day">8</div>
+                            <div class="calendar-day">9</div>
+                            <div class="calendar-day">10</div>
+                            <div class="calendar-day">11</div>
+                            <div class="calendar-day">12</div>
+                            <div class="calendar-day">13</div>
+                            <div class="calendar-day">14</div>
+                            <div class="calendar-day">15</div>
+                            <div class="calendar-day">16</div>
+                            <div class="calendar-day">17</div>
+                            <div class="calendar-day">18</div>
+                            <div class="calendar-day">19</div>
+                            <div class="calendar-day selected">20</div>
+                            <div class="calendar-day">21</div>
+                            <div class="calendar-day">22</div>
+                            <div class="calendar-day">23</div>
+                            <div class="calendar-day">24</div>
+                            <div class="calendar-day">25</div>
+                            <div class="calendar-day">26</div>
+                            <div class="calendar-day">27</div>
+                            <div class="calendar-day">28</div>
+                            <div class="calendar-day">29</div>
+                            <div class="calendar-day">30</div>
+                            <div class="calendar-day">31</div>
+                            <div class="calendar-day disabled">1</div>
+                            <div class="calendar-day disabled">2</div>
+                            <div class="calendar-day disabled">3</div>
+                            <div class="calendar-day disabled">4</div>
+                        </div>
+                    </div>
+                    
+                    <div class="time-slot-wrapper">
+                        <h4>20 Mayıs 2023 için Uygun Saatler</h4>
+                        <div class="time-slots">
+                            <div class="time-slot">09:00</div>
+                            <div class="time-slot">09:30</div>
+                            <div class="time-slot disabled">10:00</div>
+                            <div class="time-slot selected">10:30</div>
+                            <div class="time-slot">11:00</div>
+                            <div class="time-slot">11:30</div>
+                            <div class="time-slot">13:00</div>
+                            <div class="time-slot">13:30</div>
+                            <div class="time-slot">14:00</div>
+                            <div class="time-slot">14:30</div>
+                            <div class="time-slot">15:00</div>
+                            <div class="time-slot">15:30</div>
+                            <div class="time-slot">16:00</div>
+                            <div class="time-slot">16:30</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-buttons">
+                        <button class="btn btn-outline prev-step">Geri</button>
+                        <button class="btn btn-primary next-step">İleri</button>
+                    </div>
+                </div>
+
+                <div class="step-content" id="step-3">
+                    <h3>Randevu Bilgileri</h3>
+                    <p class="step-info">Randevu detaylarını gözden geçirin ve onaylayın</p>
+                    
+                    <div class="booking-summary">
+                        <div class="summary-item">
+                            <div class="summary-label">Birim:</div>
+                            <div class="summary-value" id="birim-name">Dijital Dönüşüm Ofisi</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Randevu Türü:</div>
+                            <div class="summary-value">Genel Bilgi Alma (15 dk)</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Tarih:</div>
+                            <div class="summary-value">20 Mayıs 2023</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Saat:</div>
+                            <div class="summary-value">10:30</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appointment-notes">Görüşme Konusu (Zorunlu)</label>
+                        <textarea id="appointment-notes" class="form-control" rows="4" placeholder="Görüşme konunuzu ve talebinizi kısaca açıklayın..." required></textarea>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input type="checkbox" id="terms-conditions" name="terms-conditions" required>
+                        <label for="terms-conditions">Randevu şartlarını ve koşullarını kabul ediyorum</label>
+                    </div>
+                    
+                    <div class="step-buttons">
+                        <button class="btn btn-outline prev-step">Geri</button>
+                        <button class="btn btn-primary" id="confirm-appointment">Randevuyu Onayla</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 AkademikRandevu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Birim adını URL'den çekip sayfaya yerleştirme
+        document.addEventListener('DOMContentLoaded', function() {
+            // URL'den birim parametresini al
+            const urlParams = new URLSearchParams(window.location.search);
+            const birimParam = urlParams.get('birim');
+            
+            // Birim adını belirle
+            let birimAdi = "Seçilen Birim";
+            
+            if (birimParam) {
+                // URL parametresine göre birim adı belirleme
+                switch(birimParam) {
+                    case 'dijital-donusum':
+                        birimAdi = "Dijital Dönüşüm Ofisi";
+                        break;
+                    case 'ogrenci-isleri':
+                        birimAdi = "Öğrenci İşleri Daire Başkanlığı";
+                        break;
+                    case 'degisim-programlari':
+                        birimAdi = "Değişim Programları Ofisi";
+                        break;
+                    case 'kariyer-merkezi':
+                        birimAdi = "Kariyer Merkezi";
+                        break;
+                    case 'uluslararasi-ogrenci':
+                        birimAdi = "Uluslararası Öğrenci Ofisi";
+                        break;
+                    case 'bilgi-islem':
+                        birimAdi = "Bilgi İşlem Daire Başkanlığı";
+                        break;
+                    case 'yazilim-gelistirme':
+                        birimAdi = "Yazılım Geliştirme Ofisi";
+                        break;
+                    case 'inovasyon-merkezi':
+                        birimAdi = "İnovasyon Merkezi";
+                        break;
+                    case 'mali-isler':
+                        birimAdi = "Mali İşler Daire Başkanlığı";
+                        break;
+                    case 'yurt-mudurlugu':
+                        birimAdi = "Yurt Müdürlüğü";
+                        break;
+                    case 'kutuphane':
+                        birimAdi = "Kütüphane ve Dokümantasyon";
+                        break;
+                    case 'saglik-kultur':
+                        birimAdi = "Sağlık Kültür ve Spor";
+                        break;
+                    default:
+                        birimAdi = "Seçilen Birim";
+                }
+            }
+            
+            // Birim adını ilgili alanlara yerleştir
+            document.getElementById('birim-name').textContent = birimAdi;
+            document.getElementById('birim-info').textContent = `${birimAdi} biriminden hangi konu için randevu almak istediğinizi seçin`;
+            document.getElementById('birim-tarih-info').textContent = `${birimAdi} birimi ile görüşmek istediğiniz tarihi ve saati seçin`;
+            
+            // "Randevuyu Onayla" butonuna tıklandığında
+            document.getElementById('confirm-appointment').addEventListener('click', function(e) {
+                // Form doğrulama
+                const notes = document.getElementById('appointment-notes').value;
+                const termsCheck = document.getElementById('terms-conditions').checked;
+                
+                if (!notes.trim()) {
+                    alert('Lütfen görüşme konusunu belirtin.');
+                    return;
+                }
+                
+                if (!termsCheck) {
+                    alert('Devam etmek için şartları ve koşulları kabul etmeniz gerekmektedir.');
+                    return;
+                }
+                
+                // Randevu bilgilerini topla
+                const selectedType = document.querySelector('.appointment-type-card.selected h4').textContent;
+                const selectedDuration = document.querySelector('.appointment-type-card.selected .appointment-duration').textContent.replace('Süre: ', '');
+                const selectedDay = document.querySelector('.calendar-day.selected').textContent;
+                const calendarTitle = document.querySelector('.calendar-title').textContent;
+                const selectedTime = document.querySelector('.time-slot.selected').textContent;
+                
+                // Randevu nesnesi oluştur
+                const appointment = {
+                    id: 'BRM-' + Math.floor(100000 + Math.random() * 900000),
+                    birim: birimAdi,
+                    type: `${selectedType} (${selectedDuration})`,
+                    date: `${selectedDay} ${calendarTitle}`,
+                    time: selectedTime,
+                    notes: notes,
+                    status: 'pending',
+                    student: 'Ayşe Yılmaz',
+                    createdAt: new Date().toISOString()
+                };
+                
+                // Mevcut randevuları al
+                let appointments = JSON.parse(localStorage.getItem('appointments') || '[]');
+                
+                // Yeni randevuyu ekle
+                appointments.push(appointment);
+                
+                // LocalStorage'a kaydet
+                localStorage.setItem('appointments', JSON.stringify(appointments));
+                
+                // Onay sayfasına yönlendir
+                alert('Randevunuz başarıyla oluşturuldu! Randevu numaranız: ' + appointment.id);
+                window.location.href = 'ogrenci-dashboard.html';
+            });
+        });
+    </script>
+</body>
+</html> 

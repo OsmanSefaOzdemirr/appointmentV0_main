@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademikRandevu - Akademik Randevu Sistemi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>AkademikRandevu</h1>
+                </a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                    <li><a href="akademisyenler.html">Akademisyenler</a></li>
+                    <li><a href="bolumler.html">Bölümler</a></li>
+                    <li><a href="birimler.html">Birimler</a></li>
+                    <li><a href="duyurular.html">Duyurular</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="login.html" class="btn btn-primary">Giriş</a>
+                <a href="register.html" class="btn btn-secondary">Kayıt Ol</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Randevu Almak istediğin Akademisyeni Bul</h2>
+                <div class="search-box">
+                    <form action="#" method="get">
+                        <div class="form-group" style="flex-grow: 2;">
+                            <i class="fas fa-search"></i>
+                            <input type="text" name="searchQuery" placeholder="Akademisyen, birim, bölüm veya duyuru ara...">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Ara</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcements Section -->
+    <section class="homepage-announcements" style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h3 style="margin-bottom: 0;">Duyurular</h3>
+                <a href="duyurular.html" class="btn btn-outline">Tümünü Gör <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+            </div>
+            <div id="homepageAnnouncementsGrid" class="announcement-grid-homepage">
+                <!-- Announcements will be loaded here by JavaScript -->
+                <p>Duyurular yükleniyor...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 AkademikRandevu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

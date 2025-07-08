@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randevu Al - AkademikRandevu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>AkademikRandevu</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="akademisyenler.html">Akademisyenler</a></li>
+                    <li><a href="bolumler.html">Bölümler</a></li>
+                    <li><a href="duyurular.html">Duyurular</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <img src="img/user.jpg" alt="Profil Resmi" class="user-img">
+                        <span>Ayşe Yılmaz</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="profile-settings.html"><i class="fas fa-user-cog"></i> Profil Ayarları</a>
+                        <a href="login.html"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <h2 class="page-title">Randevu Al</h2>
+            
+            <div class="booking-steps">
+                <div class="booking-step active">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Randevu Türü</div>
+                </div>
+                <div class="booking-step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Akademisyen</div>
+                </div>
+                <div class="booking-step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Tarih & Saat</div>
+                </div>
+                <div class="booking-step">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Bilgiler</div>
+                </div>
+            </div>
+
+            <div class="booking-panel">
+                <div class="step-content active" id="step-1">
+                    <h3>Randevu Türü Seçin</h3>
+                    <p class="step-info">Akademisyenle görüşme amacınızı seçin</p>
+                    
+                    <div class="appointment-types">
+                        <div class="appointment-type-card selected">
+                            <div class="appointment-type-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>Genel Görüşme</h4>
+                            <p>Herhangi bir konu için genel danışmanlık</p>
+                            <div class="appointment-duration">Süre: 30 dk</div>
+                        </div>
+                        <div class="appointment-type-card">
+                            <div class="appointment-type-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h4>Ödev Danışmanlığı</h4>
+                            <p>Ödevler ve projeler hakkında görüşme</p>
+                            <div class="appointment-duration">Süre: 45 dk</div>
+                        </div>
+                        <div class="appointment-type-card">
+                            <div class="appointment-type-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Tez Danışmanlığı</h4>
+                            <p>Tez konuları ve içerik değerlendirmesi</p>
+                            <div class="appointment-duration">Süre: 60 dk</div>
+                        </div>
+                        <div class="appointment-type-card">
+                            <div class="appointment-type-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h4>Sınav Hazırlığı</h4>
+                            <p>Sınav öncesi yardım ve değerlendirme</p>
+                            <div class="appointment-duration">Süre: 45 dk</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-buttons">
+                        <button class="btn btn-secondary" onclick="window.location.href='index.html'">İptal</button>
+                        <button class="btn btn-primary next-step">İleri</button>
+                    </div>
+                </div>
+
+                <div class="step-content" id="step-2">
+                    <h3>Akademisyen Seçin</h3>
+                    <p class="step-info">Görüşmek istediğiniz akademisyeni seçin</p>
+                    
+                    <div class="search-filters">
+                        <div class="filter-group">
+                            <input type="text" placeholder="Akademisyen ara..." class="form-control">
+                        </div>
+                        <div class="filter-group">
+                            <select class="form-control">
+                                <option value="">Tüm Fakülteler</option>
+                                <option value="muhendislik">Mühendislik Fakültesi</option>
+                                <option value="isletme">İşletme Fakültesi</option>
+                                <option value="fen-edebiyat">Fen Edebiyat Fakültesi</option>
+                                <option value="egitim">Eğitim Fakültesi</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <select class="form-control">
+                                <option value="">Tüm Bölümler</option>
+                                <option value="bilgisayar">Bilgisayar Mühendisliği</option>
+                                <option value="elektrik">Elektrik-Elektronik Mühendisliği</option>
+                                <option value="isletme">İşletme</option>
+                                <option value="psikoloji">Psikoloji</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="academics-list">
+                        <div class="academic-list-card selected">
+                            <div class="academic-list-img">
+                                <img src="img/academic1.jpg" alt="Prof. Dr. Ahmet Yılmaz" onerror="this.src='img/default-user.svg'">
+                            </div>
+                            <div class="academic-list-info">
+                                <h4>Prof. Dr. Ahmet Yılmaz</h4>
+                                <p>Bilgisayar Mühendisliği</p>
+                                <div class="academic-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="academic-list-card">
+                            <div class="academic-list-img">
+                                <img src="img/academic2.jpg" alt="Doç. Dr. Ayşe Kaya" onerror="this.src='img/default-user.svg'">
+                            </div>
+                            <div class="academic-list-info">
+                                <h4>Doç. Dr. Ayşe Kaya</h4>
+                                <p>İşletme</p>
+                                <div class="academic-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.8</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="academic-list-card">
+                            <div class="academic-list-img">
+                                <img src="img/academic3.jpg" alt="Dr. Öğr. Üyesi Mehmet Demir" onerror="this.src='img/default-user.svg'">
+                            </div>
+                            <div class="academic-list-info">
+                                <h4>Dr. Öğr. Üyesi Mehmet Demir</h4>
+                                <p>Psikoloji</p>
+                                <div class="academic-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="academic-list-card">
+                            <div class="academic-list-img">
+                                <img src="img/academic4.jpg" alt="Prof. Dr. Zeynep Arslan" onerror="this.src='img/default-user.svg'">
+                            </div>
+                            <div class="academic-list-info">
+                                <h4>Prof. Dr. Zeynep Arslan</h4>
+                                <p>Elektrik-Elektronik Mühendisliği</p>
+                                <div class="academic-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="academic-list-card">
+                            <div class="academic-list-img">
+                                <img src="img/academic5.jpg" alt="Prof. Dr. Mustafa Aydın" onerror="this.src='img/default-user.svg'">
+                            </div>
+                            <div class="academic-list-info">
+                                <h4>Prof. Dr. Mustafa Aydın</h4>
+                                <p>Bilgisayar Mühendisliği</p>
+                                <div class="academic-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="academic-list-card">
+                            <div class="academic-list-img">
+                                <img src="img/academic6.jpg" alt="Dr. Öğr. Üyesi Aylin Kılıç" onerror="this.src='img/default-user.svg'">
+                            </div>
+                            <div class="academic-list-info">
+                                <h4>Dr. Öğr. Üyesi Aylin Kılıç</h4>
+                                <p>Fen Edebiyat Fakültesi</p>
+                                <div class="academic-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.6</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="academic-list-card">
+                            <div class="academic-list-img">
+                                <img src="img/academic7.jpg" alt="Doç. Dr. Ali Tekin" onerror="this.src='img/default-user.svg'">
+                            </div>
+                            <div class="academic-list-info">
+                                <h4>Doç. Dr. Ali Tekin</h4>
+                                <p>Eğitim Fakültesi</p>
+                                <div class="academic-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.8</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="academic-list-card">
+                            <div class="academic-list-img">
+                                <img src="img/academic8.jpg" alt="Prof. Dr. Sema Yücel" onerror="this.src='img/default-user.svg'">
+                            </div>
+                            <div class="academic-list-info">
+                                <h4>Prof. Dr. Sema Yücel</h4>
+                                <p>İşletme</p>
+                                <div class="academic-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-buttons">
+                        <button class="btn btn-outline prev-step">Geri</button>
+                        <button class="btn btn-primary next-step">İleri</button>
+                    </div>
+                </div>
+
+                <div class="step-content" id="step-3">
+                    <h3>Tarih ve Saat Seçin</h3>
+                    <p class="step-info">Prof. Dr. Ahmet Yılmaz ile görüşmek istediğiniz tarihi ve saati seçin</p>
+                    
+                    <div class="calendar-wrapper">
+                        <div class="calendar-header">
+                            <div class="calendar-title">Mayıs 2023</div>
+                            <div class="calendar-nav">
+                                <button class="calendar-prev"><i class="fas fa-chevron-left"></i></button>
+                                <button class="calendar-next"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="calendar-weekdays">
+                            <div class="calendar-weekday">Pzt</div>
+                            <div class="calendar-weekday">Sal</div>
+                            <div class="calendar-weekday">Çar</div>
+                            <div class="calendar-weekday">Per</div>
+                            <div class="calendar-weekday">Cum</div>
+                            <div class="calendar-weekday">Cmt</div>
+                            <div class="calendar-weekday">Paz</div>
+                        </div>
+                        
+                        <div class="calendar-days">
+                            <div class="calendar-day disabled">24</div>
+                            <div class="calendar-day disabled">25</div>
+                            <div class="calendar-day disabled">26</div>
+                            <div class="calendar-day disabled">27</div>
+                            <div class="calendar-day disabled">28</div>
+                            <div class="calendar-day disabled">29</div>
+                            <div class="calendar-day disabled">30</div>
+                            <div class="calendar-day">1</div>
+                            <div class="calendar-day">2</div>
+                            <div class="calendar-day">3</div>
+                            <div class="calendar-day">4</div>
+                            <div class="calendar-day">5</div>
+                            <div class="calendar-day">6</div>
+                            <div class="calendar-day">7</div>
+                            <div class="calendar-day">8</div>
+                            <div class="calendar-day">9</div>
+                            <div class="calendar-day">10</div>
+                            <div class="calendar-day">11</div>
+                            <div class="calendar-day">12</div>
+                            <div class="calendar-day">13</div>
+                            <div class="calendar-day">14</div>
+                            <div class="calendar-day">15</div>
+                            <div class="calendar-day">16</div>
+                            <div class="calendar-day">17</div>
+                            <div class="calendar-day">18</div>
+                            <div class="calendar-day">19</div>
+                            <div class="calendar-day selected">20</div>
+                            <div class="calendar-day">21</div>
+                            <div class="calendar-day">22</div>
+                            <div class="calendar-day">23</div>
+                            <div class="calendar-day">24</div>
+                            <div class="calendar-day">25</div>
+                            <div class="calendar-day">26</div>
+                            <div class="calendar-day">27</div>
+                            <div class="calendar-day">28</div>
+                            <div class="calendar-day">29</div>
+                            <div class="calendar-day">30</div>
+                            <div class="calendar-day">31</div>
+                            <div class="calendar-day disabled">1</div>
+                            <div class="calendar-day disabled">2</div>
+                            <div class="calendar-day disabled">3</div>
+                            <div class="calendar-day disabled">4</div>
+                        </div>
+                    </div>
+                    
+                    <div class="time-slot-wrapper">
+                        <h4>20 Mayıs 2023 için Uygun Saatler</h4>
+                        <div class="time-slots">
+                            <div class="time-slot">09:00</div>
+                            <div class="time-slot">09:30</div>
+                            <div class="time-slot disabled">10:00</div>
+                            <div class="time-slot selected">10:30</div>
+                            <div class="time-slot">11:00</div>
+                            <div class="time-slot">11:30</div>
+                            <div class="time-slot">13:00</div>
+                            <div class="time-slot">13:30</div>
+                            <div class="time-slot">14:00</div>
+                            <div class="time-slot">14:30</div>
+                            <div class="time-slot">15:00</div>
+                            <div class="time-slot">15:30</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-buttons">
+                        <button class="btn btn-outline prev-step">Geri</button>
+                        <button class="btn btn-primary next-step">İleri</button>
+                    </div>
+                </div>
+
+                <div class="step-content" id="step-4">
+                    <h3>Randevu Bilgileri</h3>
+                    <p class="step-info">Randevu detaylarını gözden geçirin ve onaylayın</p>
+                    
+                    <div class="booking-summary">
+                        <div class="summary-item">
+                            <div class="summary-label">Randevu Türü:</div>
+                            <div class="summary-value">Genel Görüşme (30 dk)</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Akademisyen:</div>
+                            <div class="summary-value">Prof. Dr. Ahmet Yılmaz (Bilgisayar Mühendisliği)</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Tarih:</div>
+                            <div class="summary-value">20 Mayıs 2023</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Saat:</div>
+                            <div class="summary-value">10:30</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appointment-notes">Notlar (İsteğe Bağlı)</label>
+                        <textarea id="appointment-notes" class="form-control" rows="4" placeholder="Akademisyene iletmek istediğiniz notlar..."></textarea>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input type="checkbox" id="terms-conditions" name="terms-conditions" required>
+                        <label for="terms-conditions">Randevu şartlarını ve koşullarını kabul ediyorum</label>
+                    </div>
+                    
+                    <div class="step-buttons">
+                        <button class="btn btn-outline prev-step">Geri</button>
+                        <button class="btn btn-primary" id="confirm-appointment">Randevuyu Onayla</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 AkademikRandevu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
